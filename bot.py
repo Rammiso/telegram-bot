@@ -2,8 +2,9 @@ from telegram.ext import MessageHandler, filters
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
 from telegram import Update
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-BOT_TOKEN = "7946811507:AAFncZnR8nDHMkt9HwsrQ61HntgKhQ5Qg34"
 MY_TELEGRAM_ID = 5072548007
 
 
