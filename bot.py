@@ -5,7 +5,7 @@ from telegram import Update
 import os
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-MY_TELEGRAM_ID = 5072548007
+MY_TELEGRAM_ID = "ID"
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -36,7 +36,7 @@ async def input_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Handle actual feedback
     elif context.user_data.get('expecting_feedback'):
         await context.bot.send_message(
-            chat_id=5072548007,
+            chat_id="ID",
             text=f"📝 New Feedback from {user.full_name} (@{user.username}):\n\n{user_input}"
         )
         await update.message.reply_text("Thanks for your feedback! 🙏")
@@ -45,7 +45,7 @@ async def input_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Handle actual question
     elif context.user_data.get('expecting_question'):
         await context.bot.send_message(
-            chat_id=5072548007,
+            chat_id="ID",
             text=f"❓ New Question from {user.full_name} (@{user.username}):\n\n{user_input}"
         )
         await update.message.reply_text("Thanks for your question! 🙏")
