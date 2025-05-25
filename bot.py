@@ -3,8 +3,6 @@ from telegram import ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
 from telegram import Update
 import os
-from dotenv import load_dotenv
-load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 MY_TELEGRAM_ID = os.getenv("TELEGRAM_USER_ID")
